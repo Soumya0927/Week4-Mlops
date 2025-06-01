@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-06-01T17:15:09.878413",
+  "dataset_info": {
+    "total_samples": 150,
+    "features": [
+      "sepal_length",
+      "sepal_width",
+      "petal_length",
+      "petal_width"
+    ],
+    "classes": [
+      "setosa",
+      "versicolor",
+      "virginica"
+    ],
+    "class_distribution": {
+      "setosa": 50,
+      "versicolor": 50,
+      "virginica": 50
+    }
+  },
+  "data_split": {
+    "train_size": 105,
+    "test_size": 45,
+    "test_ratio": 0.3
+  },
+  "model_config": {
+    "algorithm": "DecisionTreeClassifier",
+    "max_depth": 5,
+    "min_samples_split": 5,
+    "min_samples_leaf": 2,
+    "random_state": 42
+  },
+  "performance": {
+    "train_accuracy": 0.9714285714285714,
+    "test_accuracy": 0.8888888888888888,
+    "accuracy_difference": 0.08253968253968258
+  }
+}
