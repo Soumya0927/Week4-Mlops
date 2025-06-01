@@ -39,15 +39,15 @@ def main():
             
             # Step 1: Load IRIS dataset
             pbar.set_description("Loading dataset...")
-            data_path = 'data/iris.csv'
+            data_path = 'data/data.csv'
             
             if not os.path.exists(data_path):
                 raise FileNotFoundError(f"Dataset not found at {data_path}")
                 
             df = pd.read_csv(data_path)
             
-            pbar.set_description("🔍 Exploring data...")
-            print(f"📊 Dataset Info:")
+            pbar.set_description("Exploring data...")
+            print(f"Dataset Info:")
             print(f"   - Shape: {df.shape}")
             print(f"   - Classes: {df['species'].unique()}")
             print(f"   - Class distribution:\n{df['species'].value_counts().to_dict()}")
@@ -116,7 +116,7 @@ def main():
             pbar.update(1)
             
             # Step 7: Calculate metrics
-            pbar.set_description("📊 Calculating metrics...")
+            pbar.set_description("Calculating metrics...")
             train_accuracy = accuracy_score(y_train, y_train_pred)
             test_accuracy = accuracy_score(y_test, y_test_pred)
             
@@ -212,7 +212,7 @@ def main():
 if __name__ == "__main__":
     success = main()
     if success:
-        print("\n✨ Ready for DVC tracking and version control!")
+        print("\nReady for DVC tracking and version control!")
     else:
-        print("\n💥 Pipeline failed. Please check the errors above.")
+        print("\nPipeline failed. Please check the errors above.")
         exit(1)
