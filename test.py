@@ -2,21 +2,27 @@ import unittest
 import pandas as pd
 import joblib
 from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import LabelEncoder
 
 class TestModelAccuracy(unittest.TestCase):
     def test_model_accuracy_on_sample_data(self):
-        # Load the model
+        # Load model and label encoder
         model = joblib.load("models/models.pkl")
-        
-        # Load the sample CSV
+
+        # Load the sample data
         df = pd.read_csv("samples.csv")
 
-        # Prepare features and labels
+        # Features and true labels
         X = df.drop(columns=["species"])
         y_true = df["species"]
 
-        # Predict using the model
-        y_pred = model.predict(X)
+        # Predict using model (returns encoded labels)
+        y_pred_encoded = model.predict(X)
+
+        # Map encoded predictions to actual labels
+        label_encoder = LabelEncoder()
+        label_encoder.fit(["setosa", "versicolor", "virginica"])
+        y_pred = label_encoder.inverse_transform(y_pred_encoded)
 
         # Calculate accuracy
         accuracy = accuracy_score(y_true, y_pred)
@@ -27,3 +33,4 @@ class TestModelAccuracy(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
