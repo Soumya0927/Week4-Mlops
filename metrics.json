@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-05T16:07:24.904426",
+  "timestamp": "2025-08-05T16:13:05.097211",
   "dataset_info": {
     "total_samples": 150,
     "features": [
@@ -9,14 +9,14 @@
       "petal_width"
     ],
     "classes": [
-      "setosa",
       "versicolor",
+      "setosa",
       "virginica"
     ],
     "class_distribution": {
-      "virginica": 51,
-      "setosa": 50,
-      "versicolor": 49
+      "versicolor": 56,
+      "virginica": 49,
+      "setosa": 45
     }
   },
   "data_split": {
@@ -32,8 +32,8 @@
     "random_state": 42
   },
   "performance": {
-    "train_accuracy": 0.8666666666666667,
-    "test_accuracy": 0.8222222222222222,
-    "accuracy_difference": 0.04444444444444451
+    "train_accuracy": 0.7333333333333333,
+    "test_accuracy": 0.5111111111111111,
+    "accuracy_difference": 0.2222222222222222
   }
 }
