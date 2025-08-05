@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-05T15:51:22.033598",
+  "timestamp": "2025-08-05T16:07:24.904426",
   "dataset_info": {
     "total_samples": 150,
     "features": [
@@ -14,9 +14,9 @@
       "virginica"
     ],
     "class_distribution": {
-      "virginica": 53,
-      "setosa": 49,
-      "versicolor": 48
+      "virginica": 51,
+      "setosa": 50,
+      "versicolor": 49
     }
   },
   "data_split": {
@@ -32,8 +32,8 @@
     "random_state": 42
   },
   "performance": {
-    "train_accuracy": 0.9428571428571428,
-    "test_accuracy": 0.8444444444444444,
-    "accuracy_difference": 0.0984126984126984
+    "train_accuracy": 0.8666666666666667,
+    "test_accuracy": 0.8222222222222222,
+    "accuracy_difference": 0.04444444444444451
   }
 }
